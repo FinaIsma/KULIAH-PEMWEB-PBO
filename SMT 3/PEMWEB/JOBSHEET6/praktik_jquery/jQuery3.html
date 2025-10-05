@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #paragraf {
+            width: 600px;
+            height: 80px;
+            background-color: pink;
+            line-height: 80px;
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+    <script src="jquery-3.7.1.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#paragraf").click(function() {
+                $("#paragraf").css("color", "white"); // Klik sekali → ubah warna teks jadi putih
+            });
+
+            $("#paragraf").mouseover(function() {
+                $("#paragraf").css("background-color", "silver");  // Saat mouse diarahkan ke elemen → ubah background jadi silver
+            });
+
+            $("#paragraf").mouseout(function() {
+                $("#paragraf").css("background-color", "blue");  // Saat mouse keluar dari elemen → ubah background jadi biru
+            });
+
+            $("#paragraf").dblclick(function() {
+                $("#paragraf").css("border", "solid 3px black"); // Klik dua kali → tambahkan border hitam
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="paragraf">Arahkan atau Klik Saya!</div>
+</body>
+</html>
