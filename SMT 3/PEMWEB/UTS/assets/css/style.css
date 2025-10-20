@@ -1,0 +1,653 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Glacial+Indifference:wght@400;700&display=swap');
+
+:root {
+  --beige: #f2e0d2;
+  --brown: #5b3a29;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--white);
+  color: var(--brown);
+  font-family: 'Glacial Indifference', sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  background: var(--beige);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 48px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--brown);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--brown);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.nav-menu a.active,
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+.nav-right {
+  display: flex;
+  gap: 16px;
+}
+
+.navbar i {
+  font-size: 20px;
+  color: var(--brown);
+  transition: 0.2s ease;
+}
+
+.navbar i:hover {
+  color: #8b5e3c;
+  transform: scale(1.1);
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--brown);
+  text-decoration: none;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.side-img {
+  width: 150px;
+  height: 150px;
+  opacity: .9;
+}
+
+.side-img.left {
+  position: absolute;
+  left: 250px;
+  top: 28%;
+  transform: translateY(-50%);
+}
+
+.side-img.left2 {
+  position: absolute;
+  left: 185px;
+  top: 70%;
+  transform: translateY(-50%);
+}
+
+.side-img.right {
+  position: absolute;
+  right: 250px;
+  top: 28%;
+  transform: translateY(-50%);
+}
+
+.side-img.right2 {
+  position: absolute;
+  right: 185px;
+  top: 70%;
+  transform: translateY(-50%);
+}
+
+.hero-center {
+  text-align: center;
+}
+
+.title {
+  font-family: 'Shrikhand', cursive;
+  font-size: 70px;
+  letter-spacing: 6px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  transform: scaleY(1);
+}
+
+.arch {
+  width: 600px;
+  height: 300px;
+  background: #b57f59;
+  border-top-left-radius: 400px;
+  border-top-right-radius: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.arch img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.subtitle {
+  font-family: 'Glacial Indifference', sans-serif;
+  font-size: 18px;
+  margin-top: 30px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+@media(max-width:768px) {
+  .navbar {
+    padding: 10px 24px;
+  }
+
+  .arch {
+    width: 280px;
+    height: 140px;
+  }
+
+  .title {
+    font-size: 42px;
+  }
+
+  .side-img {
+    display: none;
+  }
+}
+
+/* Products Page */
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background: var(--white);
+}
+
+.product-highlight {
+  display: flex;
+  gap: 24px;
+  background: var(--beige);
+  border-radius: 20px;
+  padding: 22px;
+  width: 90%;
+  max-width: 880px;
+  margin-bottom: 36px;
+}
+
+.product-highlight img {
+  width: 25%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  max-width: 55%;
+  height: 100%;
+}
+
+.product-info h2 {
+  font-family: 'Glacial Indifference', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+  margin-bottom: 6px;
+}
+
+.price {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.product-info p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+/* quantity dan tombol */
+.product-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  gap: 10px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.quantity button {
+  border: 1.5px solid var(--brown);
+  background: none;
+  color: var(--brown);
+  border-radius: 20px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.add-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--white);
+  border: 1.5px solid var(--brown);
+  border-radius: 25px;
+  padding: 6px 18px;
+  cursor: pointer;
+  font-family: 'Glacial Indifference';
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.add-cart:hover {
+  background: var(--brown);
+  color: var(--white);
+}
+
+.product-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  width: 90%;
+  max-width: 900px;
+}
+
+.thumb {
+  background: var(--beige);
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.thumb:hover {
+  transform: scale(1.03);
+}
+
+.thumb img {
+  width: 100%;
+  height: 150px;
+  border-radius: 14px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.thumb h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.thumb p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.brand {
+  font-family: 'Shrikhand', cursive;
+  font-size: 26px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  color: var(--brown);
+}
+
+/* Purchases Page */
+.purchases {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  background: var(--white);
+  min-height: 80vh;
+}
+
+.section-title {
+  font-family: 'Shrikhand', cursive;
+  color: var(--brown);
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.order-card {
+  display: flex;
+  align-items: center;
+  background: var(--beige);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 800px;
+  padding: 20px;
+  margin-bottom: 24px;
+  gap: 20px;
+  transition: transform 0.2s ease;
+}
+
+.order-card:hover {
+  transform: scale(1.02);
+}
+
+.order-card img {
+  width: 140px;
+  height: 140px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.order-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--brown);
+}
+
+.order-info h3 {
+  font-family: 'Glacial Indifference', sans-serif;
+  font-size: 20px;
+  margin-bottom: 6px;
+  text-decoration: underline;
+}
+
+.order-info p {
+  font-size: 15px;
+  margin: 4px 0;
+}
+
+.order-date i {
+  margin-right: 6px;
+}
+
+.status {
+  font-weight: bold;
+  margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+}
+
+.status.delivered {
+  color: green;
+}
+
+.status.otw {
+  color: #b57f59;
+}
+
+.cart-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  background: var(--white);
+  min-height: 80vh;
+}
+
+.cart-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px;
+  width: 95%;
+}
+
+.cart-card {
+  flex: 0 0 180px;
+  background: var(--beige);
+  border-radius: 16px;
+  text-align: center;
+  padding: 16px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.cart-card:hover {
+  transform: scale(1.05);
+}
+
+.cart-card img {
+  width: 100%;
+  height: 120px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.cart-card h3 {
+  font-family: 'Glacial Indifference', sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+.cart-card .quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.cart-card .quantity button {
+  border: 1.5px solid var(--brown);
+  background: none;
+  color: var(--brown);
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cart-card .quantity button:hover {
+  background: var(--brown);
+  color: var(--white);
+}
+
+.cart-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.cart-container::-webkit-scrollbar-thumb {
+  background: #b57f59;
+  border-radius: 10px;
+}
+
+/* Profile Page */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  background: var(--white);
+  min-height: 80vh;
+  justify-content: flex-start;
+}
+
+.profile-title {
+  font-family: 'Shrikhand', cursive;
+  font-size: 36px;
+  color: var(--brown);
+  margin-bottom: 40px;
+  text-decoration: underline;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background: var(--beige);
+  border-radius: 16px;
+  padding: 30px 40px;
+  width: 75%;
+  max-width: 850px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.profile-image img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 6px solid #b79687;
+  object-fit: cover;
+}
+
+.profile-form {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-form label {
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+
+.profile-form input,
+.profile-form textarea {
+  background: #f8e8d9;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+}
+
+.save-btn {
+  align-self: flex-end;
+  background: #a3857a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 18px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: 0.2s ease;
+}
+
+.save-btn:hover {
+  background: var(--brown);
+}
+
+/* auth page  */
+.auth-page {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Glacial Indifference', sans-serif;
+  position: relative;
+}
+
+.auth-overlay {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.auth-form h1 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 50px;
+  color: var(--brown);
+  letter-spacing: 6px;
+  margin-bottom: 12px;
+}
+
+.auth-form h2 {
+  font-size: 26px;
+  color: var(--brown);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.auth-form p {
+  font-size: 13px;
+  color: var(--brown);
+  margin-bottom: 16px;
+}
+
+.auth-form a {
+  color: #b57f59;
+  text-decoration: underline;
+}
+
+.auth-form input,
+.auth-form select {
+  width: 100%;
+  background: #f8e8d9;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.auth-btn {
+  background: var(--brown);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.auth-btn:hover {
+  background: #8b5e3c;
+  transform: translateY(-2px);
+}
