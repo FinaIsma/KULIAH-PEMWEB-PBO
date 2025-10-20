@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>kyukiez | Profile</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <!-- ===== Navbar ===== -->
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="brand">kyukiez</div>
+
+      <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="purchases.html">My Purchases</a>
+      </nav>
+    </div>
+
+    <div class="nav-right">
+      <a href="cart.html" class="icon-btn" title="Cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </a>
+      <a href="profile.html" class="icon-btn active" title="Profile">
+        <i class="fa-solid fa-circle-user"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- ===== Profile Section ===== -->
+  <main class="profile">
+    <h2 class="profile-title">Profile</h2>
+
+    <div class="profile-container">
+      <div class="profile-image">
+        <img src="img/a.jpg" alt="Profile Picture">
+      </div>
+
+      <form class="profile-form">
+        <label>Name</label>
+        <input type="text" placeholder="Lorem Ipsum" />
+
+        <label>Email</label>
+        <input type="email" placeholder="Lorem Ipsum" />
+
+        <label>Date of Birth</label>
+        <input type="text" placeholder="Lorem Ipsum" />
+
+        <label>Phone Number</label>
+        <input type="text" placeholder="Lorem Ipsum" />
+
+        <label>Address</label>
+        <textarea rows="2" placeholder="Lorem Ipsum"></textarea>
+
+        <button type="submit" class="save-btn">Save</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

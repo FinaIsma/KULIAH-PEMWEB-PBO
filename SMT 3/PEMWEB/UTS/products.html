@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>kyukiez | Products</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <!-- ===== Navbar ===== -->
+  <header class="navbar">
+    <div class="nav-left">
+      <h1 class="brand">kyukiez</h1>
+
+      <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="purchases.html">My Purchases</a>
+      </nav>
+    </div>
+
+    <div class="nav-right">
+      <a href="cart.html" class="icon-btn" title="Cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </a>
+      <a href="profile.html" class="icon-btn" title="Profile">
+        <i class="fa-solid fa-circle-user"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- ===== Product Section ===== -->
+  <main class="products">
+    <section class="product-highlight">
+      <img id="main-img" src="img/chocochip.jpg" alt="Chocolate Chip Cookie">
+      <div class="product-info">
+        <div>
+          <h2 id="main-title">Chocolate Chip Cookies</h2>
+          <p class="price" id="main-price">Rp. 8.999</p>
+          <p id="main-desc">
+            Our signature Chocolate Chip Cookies are made with the finest ingredients — 
+            rich butter, dark brown sugar, and a perfect blend of semi-sweet chocolate chips. 
+            Crispy on the edges yet soft and chewy inside, these cookies deliver a melt-in-your-mouth experience. 
+            Baked daily to ensure maximum freshness, perfect to share or enjoy by yourself.
+          </p>
+        </div>
+
+        <div class="product-actions">
+          <div class="quantity">
+            <button id="minus">-</button>
+            <span id="qty">1</span>
+            <button id="plus">+</button>
+          </div>
+          <button class="add-cart">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-thumbnails">
+      <div class="thumb active" data-img="img/chocochip.jpg">
+        <img src="img/chocochip.jpg" alt="Chocolate Chip Cookie">
+        <h3>Chocolate Chip Cookie</h3>
+        <p>Rp. 8.999</p>
+      </div>
+      <div class="thumb" data-img="img/lotuschiz.jpg">
+        <img src="img/lotuschiz.jpg" alt="Lotus Cheese Cookie">
+        <h3>Lotus Cheese Cookie</h3>
+        <p>Rp. 7000</p>
+      </div>
+      <div class="thumb" data-img="img/rv.jpg">
+        <img src="img/rv.jpg" alt="Red Velvet Cookie">
+        <h3>Red Velvet Cookie</h3>
+        <p>Rp. 6500</p>
+      </div>
+      <div class="thumb" data-img="img/matcha.jpg">
+        <img src="img/matcha.jpg" alt="Matcha Cookie">
+        <h3>Matcha Cookie</h3>
+        <p>Rp. 5500</p>
+      </div>
+      <div class="thumb" data-img="img/choconut.jpg">
+        <img src="img/choconut.jpg" alt="Choconut Cookie">
+        <h3>Choconut Cookie</h3>
+        <p>Rp. 7500</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
